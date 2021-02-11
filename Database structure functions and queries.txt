@@ -1,0 +1,64 @@
+Inventory management system (DATABASE)
+---------------------------------
+* component: 
+inventory (database), user application
+* authentication: 
+admin, users
+
+* Required database tables:
+      - inventory table (product details)
+      - login table (users details)
+
+* Table structure (inventory)
+     - product_id (int, primary key), product_name (varchar(30)), product_price (float), product_av (int)
+
+* Table structure (login)
+     - user_id (int, primary key), password (varchar(10))
+
+* Functions of application (admin)
+      - Add new item 
+      - View details of product
+      - Increase / decrease no. of products 
+      - * delete item
+
+* Functions of application (other users)
+      - View details of product
+      - Add to cart (choose product from list -> enter product_id - > enter no of product )
+      - Total bill (programming)
+      - Empty cart (programming)
+
+* SQL
+     - Create inventory table
+	- CREATE TABLE inventory(product_id INT, product_name VARCHAR(30), product_price FLOAT, product_av INT, PRIMARY KEY(product_id)); +
+
+     - Create login table
+	- CREATE TABLE login(user_id INT, password VARCHAR(10), PRIMARY KEY(user_id)); +
+
+* List of queries for functions of admin
+
+     - Add new item (insert)
+	- INSERT INTO inventory VALUES(product_id, product_name , product_price, product_av); +
+
+     - View details of product
+	- SELECT * FROM inventory WHERE product_id = *; +
+
+     - Increase the product availibility
+	- UPDATE inventory SET product_av = product_av + * WHERE product_id = *; +
+
+     - Decrease the product availibility
+	- UPDATE inventory SET product_av = product_av - * WHERE product_id = *; +
+
+     - * delete item
+	- DELETE FROM inventory WHERE product_id = *;
+
+* List of queries for functions of users
+
+     - View details of product
+	- SELECT * FROM inventory WHERE product_id = *; +
+
+     - Add to cart
+	- SELECT * FROM inventory WHERE product_id = *; +
+
+
+
+"INSERT INTO inventory VALUES(" + product_id + "," + product_name + "," + product_price + "," + product_av ");";

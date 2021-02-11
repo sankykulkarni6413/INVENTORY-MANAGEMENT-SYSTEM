@@ -1,0 +1,112 @@
+Inventory Management System (APPLICATION)
+--------------------------------------------------
+
+Which data structure to choose?
+Linked List
+java.lang.LinkedList; (15)
+
+LinkedList Functions (underlying data structure): 
+	- display list items
+	- insert at end of the list
+	- traverse the list
+	- Empty the list
+
+Required Common Methods:
+	- Add new item
+	- View details of product
+
+APPLICATION API
+-----------------------------------------------------------------
+* Common functions API +
+abstract class Common
+{
+	abstract void add();
+	void view()
+	{
+		
+	}
+}
+
+* Admin API +
+class Admin extends Common
+{
+	void add()
+	{
+		
+	}
+	void increase(int by)
+	{
+		
+	}
+	void decrease(int by)
+	{
+		
+	}
+}
+
+* User API +
+class User extends Common
+{
+	void add(int product_id, int amount)
+	{
+		
+	}
+	float total()
+	{
+		
+	}
+	void emptyCart()
+	{
+		
+	}
+}
+
+* Linked List API +
+
+public class LinkedList
+{
+	private class Node
+	{
+		int product_id;
+		String product_name;
+		float price;
+		int amount;
+		Node next;
+	}
+	Node head;
+	public LinkedList()
+	{
+		head = null;
+	}
+	void display()
+	{
+		
+	}
+	void insert(int product_id, String product_name, float price, int amount)
+	{
+
+	}
+	float getTotal()
+	{
+		
+	}
+	void empty()
+	{
+		head = null;
+	}
+}
+
+* User Interface (UI)
+
+class Inventory
+{
+      public String login(int user_id, String password)
+      {
+           
+      }
+      public static void main(String[] args)
+      {
+
+      }
+}
+

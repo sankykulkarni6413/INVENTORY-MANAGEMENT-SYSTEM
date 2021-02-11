@@ -1,0 +1,39 @@
+JAR - Java ARchieve
+
+Prerequisites:
+* All classes must be inside a package
+* All dependancies must be resolved
+
+LinkedList -> NIL
+Common -> NIL
+Admin -> Common
+User -> Common, LinkedList
+Inventory -> User, Admin
+
+Application.LinkedList -> NIL
+Application.Common -> NIL
+Application.Admin -> Application.Common
+Application.User -> Application.Common, Application.LinkedList
+Application.Inventory -> Application.Admin, Application.User
+
+* Resolve all scopes
+Turn required methods to public access. Turn inherited method to protected access
+
+JAR FILE:
+- Executing application
+- Sharing code
+
+COMMAND: jar
+
+javac -d
+
+jar -c, -f, -m
+c = create
+f = include files
+m = include manifest file
+
+
+
+Job1 -> Job2 -> Job3 -----> JobN
+
+
